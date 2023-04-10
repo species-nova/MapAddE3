@@ -1,0 +1,44 @@
+{
+ "name" : "MapAdd - E3",
+ "description" : "Map package for developer & presentation levels.",
+ "author" : "Rhynne, HEATDev",
+ "contact" : "",
+ "version" : "1",
+ "priority" : 46,
+ "blt_version" : 2,
+ "image" : "res.png",
+ "undisablable" : true,
+ "disable_safe_mode" : false,
+ "pre_hooks" : [
+		{ "hook_id" : "lib/entry", "script_path" : "Corepre.lua" }
+    ],
+ "libraries" : [
+        {
+            "display_name" : "BeardLib",
+            "identifier" : "beardlib",
+            "optional" : "false"
+        }
+    ],
+	"hooks": [
+		{
+			"hook_id": "core/lib/managers/coresequencemanager",
+			"script_path": "CoreScriptData.lua"
+		},
+		{
+			"hook_id": "lib/units/props/timergui",
+			"script_path": "timergui.lua"
+		},
+		{
+			"hook_id": "lib/tweak_data/assetstweakdata",
+			"script_path": "assetstemp.lua"
+		},
+		{
+			"hook_id": "lib/tweak_data/levelstweakdata",
+			"script_path": "levelstweakdata.lua"
+		},
+		{
+			"hook_id": "lib/managers/localizationmanager",
+			"script_path": "loc.lua"
+		}
+	]
+}

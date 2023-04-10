@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<mod name="MapAddE3" global_key="mapadde3">
+	<tweak definition="heat_postprocessor_tweak.xml"/>
+</mod>

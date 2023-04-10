@@ -1,0 +1,58 @@
+<table>
+	<world path="world" script_data_type="binary"/>
+	<continents path="continents" script_data_type="binary"/>
+	<mission path="mission" script_data_type="binary"/>
+	<nav_data path="nav_manager_data" script_data_type="binary"/>
+	<world_sounds path="world_sounds" script_data_type="binary"/>
+	<world_cameras path="world_cameras" script_data_type="binary"/>
+	<massunit path="massunit" reload="true"/>
+	<continent path="lighting_fixes/lighting_fixes" script_data_type="binary"/>
+	<mission path="lighting_fixes/lighting_fixes" script_data_type="binary"/>
+	<continent path="lights/lights" script_data_type="binary"/>
+	<mission path="lights/lights" script_data_type="binary"/>
+	<continent path="lines/lines" script_data_type="binary"/>
+	<mission path="lines/lines" script_data_type="binary"/>
+	<continent path="world/world" script_data_type="binary"/>
+	<mission path="world/world" script_data_type="binary"/>
+	<continent path="editor_only/editor_only" script_data_type="binary"/>
+	<mission path="editor_only/editor_only" script_data_type="binary"/>
+	<cover_data path="cover_data" script_data_type="binary"/>
+	<environment path="environments/e3_garage_v4" script_data_type="custom_xml"/>
+	<texture path="cube_lights/dome_occlusion"/>
+	<texture path="cube_lights/100213"/>
+	<texture path="cube_lights/100211"/>
+	<texture path="cube_lights/100229"/>
+	<texture path="cube_lights/100227"/>
+	<texture path="cube_lights/100209"/>
+	<texture path="cube_lights/100207"/>
+	<texture path="cube_lights/100223"/>
+	<texture path="cube_lights/100225"/>
+	<texture path="cube_lights/100219"/>
+	<texture path="cube_lights/100221"/>
+	<texture path="cube_lights/100203"/>
+	<texture path="cube_lights/100205"/>
+	<texture path="cube_lights/100215"/>
+	<texture path="cube_lights/100217"/>
+	<texture path="cube_lights/100199"/>
+	<texture path="cube_lights/100201"/>
+	<environment path="environments/env_e3_garage_v3" script_data_type="custom_xml"/>
+	<environment path="environments/env_e3_garage_v2" script_data_type="custom_xml"/>
+	<texture path="cube_lights/100226"/>
+	<texture path="cube_lights/100212"/>
+	<texture path="cube_lights/100228"/>
+	<texture path="cube_lights/100210"/>
+	<texture path="cube_lights/100222"/>
+	<texture path="cube_lights/100208"/>
+	<texture path="cube_lights/100224"/>
+	<texture path="cube_lights/100206"/>
+	<texture path="cube_lights/100218"/>
+	<texture path="cube_lights/100204"/>
+	<texture path="cube_lights/100214"/>
+	<texture path="cube_lights/100220"/>
+	<texture path="cube_lights/100202"/>
+	<texture path="cube_lights/100200"/>
+	<texture path="cube_lights/100216"/>
+	<texture path="cube_lights/100198"/>
+	<environment path="environments/env_e3_garage_v1" script_data_type="custom_xml"/>
+	<environment path="environments/default" script_data_type="custom_xml"/>
+</table>
