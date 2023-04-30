@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<dynamic_object>
+	<diesel materials="units/pd2_mod_e3/props/e3_police_cruiser/e3_police_cruiser" orientation_object="rp_bnk_vehicle_car_police_anim_1" />
+	<sequence_manager file="units/pd2_mod_e3/props/e3_police_cruiser/e3_police_cruiser" />
+	
+	<animations>
+		<animation_group name="anim" enabled="false">
+			<object name="anim_car" />
+			<object name="anim_body" />
+			<object name="anim_wheel_rear" />
+			<object name="anim_wheel_front_right" />
+			<object name="anim_wheel_front_left" />
+			<object name="anim_door_left" />
+			<object name="anim_door_right" />
+			<object name="li_light_blue" />
+			<object name="li_light_red" />
+		</animation_group>
+		<animation_group name="show" enabled="false" >
+			<object name="li_light_blue" />
+			<object name="li_light_red" />
+		</animation_group>
+	</animations>
+
+	<bodies>
+		<!-- Chassi Collisions -->
+		<body name="body_body" enabled="true" template="animated">
+			<object name="anim_body" />
+			<object name="c_body" collision_type="mesh_mopp" />
+		</body>
+
+		<body name="body_door_left" enabled="true" template="animated">
+			<object name="anim_door_left" />
+			<object name="c_door_left" collision_type="mesh_mopp" />
+		</body>
+
+		<body name="body_door_right" enabled="true" template="animated">
+			<object name="anim_door_right" />
+			<object name="c_door_right" collision_type="mesh_mopp" />
+		</body>
+
+		<!-- Wheel Collisions -->
+		<body name="body_wheel_front_right" enabled="true" template="animated">
+			<object name="anim_wheel_front_right" />
+			<object name="c_wheel_front_right" collision_type="mesh_mopp" />
+		</body>
+
+		<body name="body_wheel_front_left" enabled="true" template="animated">
+			<object name="anim_wheel_front_left" />
+			<object name="c_wheel_front_left" collision_type="mesh_mopp" />
+		</body>
+
+		<!-- Window Collisions -->
+		<body name="body_win_front" enabled="true" template="animated" remove_ray_type="ai_vision">
+			<object name="anim_body" />
+			<object name="c_window_front" collision_type="mesh_mopp" />
+		</body>
+
+		<body name="body_win_left_front" enabled="true" template="animated" remove_ray_type="ai_vision">
+			<object name="anim_door_left" />
+			<object name="c_door_left_window" collision_type="mesh_mopp" />
+		</body>
+
+		<body name="body_win_right_front" enabled="true" template="animated" remove_ray_type="ai_vision">
+			<object name="anim_door_right" />
+			<object name="c_door_right_window" collision_type="mesh_mopp" />
+		</body>
+
+		<body name="body_win_left_rear" enabled="true" template="animated" remove_ray_type="ai_vision">
+			<object name="anim_body" />
+			<object name="c_window_rear_left" collision_type="mesh_mopp" />
+		</body>
+
+		<body name="body_win_right_rear" enabled="true" template="animated" remove_ray_type="ai_vision">
+			<object name="anim_body" />
+			<object name="c_window_rear_right" collision_type="mesh_mopp" />
+		</body>
+
+		<body name="body_win_back" enabled="true" template="animated" remove_ray_type="ai_vision">
+			<object name="anim_body" />
+			<object name="c_window_back" collision_type="mesh_mopp" />
+		</body>
+
+		<!-- Blocker Collisions -->
+		<body name="body_blocker_mover" enabled="true" template="mover_blocker" keyframed="true">
+			<object name="anim_body" />
+			<object name="c_box_blocker_mover" collision_type="box" />
+		</body>	
+
+		<body name="body_blocker_graph" enabled="true" template="graph_blocker">
+			<object name="c_box_blocker_graph" collision_type="box" padding="25" />
+		</body>
+
+		<body name="body_anim_blocker" enabled="true" template="mover_blocker" keyframed="true">
+			<object name="anim_body" />
+			<object name="c_box_point" 	collision_type="box" />
+			<object name="c_box" 		collision_type="box" />
+		</body>
+
+		<!-- Other Collision -->
+
+	</bodies>
+
+	<decal_surfaces default_material="glass_breakable">
+		<decal_mesh name="dm_window_front" 				enabled="true" material="glass_breakable" />
+		<decal_mesh name="dm_door_left_window" 			enabled="true" material="glass_breakable" />
+		<decal_mesh name="dm_door_right_window" 		enabled="true" material="glass_breakable" />
+		<decal_mesh name="dm_window_rear_left" 			enabled="true" material="glass_breakable" />
+		<decal_mesh name="dm_window_rear_right"			enabled="true" material="glass_breakable" />
+		<decal_mesh name="dm_window_back" 				enabled="true" material="glass_breakable" />
+		<decal_mesh name="dm_wheel_front_left_rubber" 	enabled="true" material="rubber" />
+		<decal_mesh name="dm_wheel_front_left_metal" 	enabled="true" material="metal_chassis" />
+		<decal_mesh name="dm_wheel_front_right_rubber" 	enabled="true" material="rubber" />
+		<decal_mesh name="dm_wheel_front_right_metal" 	enabled="true" material="metal_chassis" />
+
+		<decal_mesh name="dm_metal" 				enabled="true" material="metal_chassis" />
+		<decal_mesh name="dm_carpet" 				enabled="true" material="carpet" />
+		<decal_mesh name="dm_cloth_stuffed" 		enabled="true" material="cloth_stuffed" />
+		<decal_mesh name="dm_plastic" 				enabled="true" material="plastic" />
+	</decal_surfaces>
+
+	<graphics>
+		<graphic_group name="grp_vehicle_whole" enabled="true" culling_object="co_box_culling">
+			<object name="s_body" 				enabled="true" shadow_caster="true"  />
+			<object name="s_door_left" 			enabled="true" shadow_caster="true"  />
+			<object name="s_door_right" 		enabled="true" shadow_caster="true"  />
+			<object name="s_wheel_front_left" 	enabled="true" shadow_caster="true"  />
+			<object name="s_wheel_front_right" 	enabled="true" shadow_caster="true"  />
+			<object name="s_wheels_rear" 		enabled="true" shadow_caster="true"  />
+
+			<object name="g_il_red"   			enabled="true" />
+			<object name="g_il_blue"  			enabled="true" />
+			
+			<object name="g_mullplan"  			enabled="true" />
+			
+			<object name="g_police" 			enabled="true"  />
+			
+			<object name="g_body_lod0" 					enabled="true"/>
+			<object name="g_window_front" 				enabled="true"/>
+			<object name="g_window_back_dmg" 			enabled="false"/>
+			<object name="g_window_front_dmg" 			enabled="false"/>
+			<object name="g_win_door_f_right_lod0" 		enabled="true"/>
+			<object name="g_win_door_f_left_lod0" 		enabled="true"/>
+			<object name="g_window_rear_left" 			enabled="true"/>
+			<object name="g_window_rear_right" 			enabled="true"/>
+			<object name="g_window_back" 				enabled="true"/>
+			
+			<object name="g_kofongare" 					enabled="true"/>
+			
+			<object name="g_decal_static" 					enabled="true"/>
+			<object name="g_decal_door_right" 				enabled="true"/>
+			<object name="g_decal_door_left" 				enabled="true"/>
+		</graphic_group>
+	</graphics>
+	<lights>
+		<light editable="true" name="li_light_blue" multiplier="0.1" far_range="350" falloff="4" enabled="false" type="omni|specular" />
+		<light editable="true" name="li_light_red" multiplier="0.1" far_range="350" falloff="4" enabled="false" type="omni|specular" />
+	</lights>
+</dynamic_object>

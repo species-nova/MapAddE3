@@ -36,7 +36,7 @@ end)
 
 --Environment skies loader
 -- Much better than the original one, but I think dyn_resource manager should discard any not currently in use?
-local skies = {
+local skies2 = {
 	"sky_1930_twillight",
 	"sky_1930_sunset_heavy_clouds",
 	"sky_1846_low_sun_nice_clouds",
@@ -54,9 +54,9 @@ local skies = {
 	"sky_2003_dusk_blue_high_color_scale"
 }
 
-Hooks:Add("BeardLibPreProcessScriptData", "RestorationCreateEnvironment", function(PackManager, path, raw_data)
+Hooks:Add("BeardLibPreProcessScriptData", "E3CreateEnvironment", function(PackManager, path, raw_data)
     if managers.dyn_resource then
-        for _, sky in ipairs(skies) do
+        for _, sky in ipairs(skies2) do
             if not managers.dyn_resource:has_resource(Idstring("scene"), Idstring("core/environments/skies/" .. sky .. "/" .. sky), managers.dyn_resource.DYN_RESOURCES_PACKAGE) then
                 managers.dyn_resource:load(Idstring("scene"), Idstring("core/environments/skies/" .. sky .. "/" .. sky), managers.dyn_resource.DYN_RESOURCES_PACKAGE, nil)
             end
